@@ -1,0 +1,8 @@
+{
+  "name": "tiem-bill",
+  "version": "1.0.0",
+  "description": "Tính tiền theo dịch vụ, in bill ra máy in nhiệt 80mm, thống kê tháng",
+  "private": true,
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

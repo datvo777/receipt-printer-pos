@@ -1,0 +1,8 @@
+# Dữ liệu thật của tiệm (bill, doanh thu): không đưa lên GitHub
+data/*
+!data/.gitkeep
+
+node_modules/
+*.log
+.DS_Store
+Thumbs.db

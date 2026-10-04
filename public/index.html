@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <title>Tiệm Bill</title>
+  <meta name="theme-color" content="#d6336c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Tiệm Bill">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/icon-192.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main id="view" aria-live="polite"></main>
+
+  <div id="sellBar" class="sell-bar" hidden>
+    <div class="sell-total">
+      <span id="barCount" class="muted">Chưa chọn</span>
+      <strong id="barTotal">0đ</strong>
+    </div>
+    <div class="sell-actions">
+      <button id="btnSave" class="btn ghost" data-action="checkout-save" disabled>Chỉ lưu</button>
+      <button id="btnPrint" class="btn primary" data-action="checkout-print" disabled>Lưu &amp; In bill</button>
+    </div>
+  </div>
+
+  <nav class="tabbar" aria-label="Chuyển mục">
+    <button data-tab="sell" class="tab" aria-label="Tính tiền">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>
+      <span>Tính tiền</span>
+    </button>
+    <button data-tab="history" class="tab" aria-label="Lịch sử">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span>Lịch sử</span>
+    </button>
+    <button data-tab="stats" class="tab" aria-label="Thống kê">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-7"/></svg>
+      <span>Thống kê</span>
+    </button>
+    <button data-tab="settings" class="tab" aria-label="Cài đặt">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>
+      <span>Cài đặt</span>
+    </button>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
